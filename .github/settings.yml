@@ -5,7 +5,6 @@ repository:
   description: Template for Terraform Components
   homepage: https://cloudposse.com/accelerate
   topics: terraform, terraform-component
-  allow_auto_merge: true
 
 rulesets:
   - name: prevent destruction of the default branch
