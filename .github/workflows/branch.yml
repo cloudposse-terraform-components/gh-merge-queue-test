@@ -13,7 +13,8 @@ on:
     paths-ignore:
       - '.github/**'
       - 'test/**'
-
+  merge_group:
+    types: [checks_requested]
 permissions:
   contents: write
   id-token: write
@@ -22,6 +23,5 @@ permissions:
 
 jobs:
   component:
-    uses: cloudposse-terraform-components/.github/.github/workflows/shared-terraform-component.yml@merge-queue
+    uses: cloudposse-terraform-components/.github/.github/workflows/shared-terraform-component.yml@github-merge-queue
     secrets: inherit
-    
