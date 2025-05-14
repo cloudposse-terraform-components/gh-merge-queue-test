@@ -18,6 +18,8 @@ jobs:
     runs-on: ['ubuntu-latest']
     name: "Auto merge"
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4     
       - run: "gh pr merge ${{ inputs.pr_number }} --auto"
         env:
           GH_TOKEN: ${{ github.token }}
