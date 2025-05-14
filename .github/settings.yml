@@ -8,7 +8,7 @@ repository:
   allow_auto_merge: true
 
 rulesets:
-  - name: prevent destruction of the default branch
+  - name: Merge Queue
     target: branch
     enforcement: active
     conditions:
