@@ -271,7 +271,7 @@ pull_request_rules:
       github_actions:
         workflow:
           dispatch:
-            - workflow: automerge.yaml
+            - workflow: automerge.yml
               inputs:
                 pr_number: "{{ number }}"
 
