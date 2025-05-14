@@ -26,4 +26,8 @@ rulesets:
           merge_method: SQUASH
           min_entries_to_merge: 1
           min_entries_to_merge_wait_minutes: 30
-
+      - type: required_status_checks
+        parameters:
+          strict_required_status_checks_policy: false
+          do_not_enforce_on_create: false
+          required_status_checks: []
