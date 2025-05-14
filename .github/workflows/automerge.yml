@@ -1,0 +1,21 @@
+---
+name: auto merge
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number'
+        required: true
+        type: string
+
+permissions:
+  pull-requests: write
+  id-token: write
+  contents: write
+
+jobs:
+  automerge:
+    runs-on: ${{ fromJSON(inputs.runs-on) }}
+    name: "Auto merge"
+    steps:
+      - run: "gh pr merge ${{ inputs.pr_number }} --auto"
