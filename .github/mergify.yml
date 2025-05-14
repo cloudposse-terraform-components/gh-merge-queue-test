@@ -268,7 +268,12 @@ pull_request_rules:
       - *is_approved
       - *checks_are_passing 
     actions:
-      merge:
+      github_actions:
+        workflow:
+          dispatch:
+            - workflow: automerge.yaml
+              inputs:
+                pr_number: "{{ number }}"
 
   - name: "Request approval for PRs"
     conditions:
