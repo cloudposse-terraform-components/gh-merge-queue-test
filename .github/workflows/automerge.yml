@@ -19,3 +19,5 @@ jobs:
     name: "Auto merge"
     steps:
       - run: "gh pr merge ${{ inputs.pr_number }} --auto"
+        env:
+          GH_TOKEN: ${{ github.token }}
