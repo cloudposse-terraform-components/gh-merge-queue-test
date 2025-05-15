@@ -3,5 +3,3 @@ output "mock" {
   value       = local.enabled ? "hello ${basename(abspath(path.module))}" : ""
 }
 
-
-
