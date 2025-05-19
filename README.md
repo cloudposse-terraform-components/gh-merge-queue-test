@@ -27,7 +27,7 @@
 
 -->
 
-Description of this component 55
+Description of this component
 
 
 > [!TIP]
