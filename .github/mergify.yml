@@ -115,11 +115,7 @@ shared:
 
   # Has reviews and no changes requested
   is_approved: &is_approved
-    and:
-      - '#approved-reviews-by>=2'
-      - '#changes-requested-reviews-by=0'
-      - "#review-threads-unresolved=0"
-      - "branch-protection-review-decision=APPROVED"
+    "branch-protection-review-decision=APPROVED"
 
   # Has not been approved
   not_approved: &not_approved
