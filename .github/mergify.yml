@@ -120,11 +120,8 @@ shared:
       - '#changes-requested-reviews-by=0'
       - "#review-threads-unresolved=0"
       - or:
+        - '#review-requested=0'      
         - "branch-protection-review-decision=APPROVED"
-        - not:
-            and:
-              - *is_github_config
-              - *is_scaffold
 
   # Has not been approved
   not_approved: &not_approved
